@@ -20,6 +20,7 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
 }
 
 * {
@@ -95,10 +96,49 @@ body {
   font-family: var(--ff-accent);
   font-size: 0.8rem;
   text-transform: uppercase;
+  margin-bottom: 1.25rem;
 }
 
-.stats-card__category:not(:last-child) {
-  margin-bottom: 1.25rem;
+.stats-card__category:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .stats-card {
+    max-width: 1000px;
+    display: flex;
+    text-align: left;
+  }
+
+  .stats-card__img {
+    order: 2;
+    flex: 1;
+  }
+
+  .stats-card__content {
+    order: 1;
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats-card__stats-wrapper {
+    display: flex;
+  }
+
+  .stats-card_stats-subwrapper {
+    flex: 1;
+  }
+
+  .stats-card__stats {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .stats-card__category {
+    margin-bottom: 0;
+  }
 }
 
 /* Attribution Styling */
