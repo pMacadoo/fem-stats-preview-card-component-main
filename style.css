@@ -58,7 +58,7 @@ body {
 
 .stats-card__img > img {
   width: 100%;
-  background-size: cover;
+  /* background-size: cover; */
   display: block;
   opacity: 0.4;
   backdrop-filter: blur(8px);
@@ -118,9 +118,13 @@ body {
   .stats-card__content {
     order: 1;
     flex: 1;
-    padding: 4rem;
+    padding: 2.7rem;
     display: flex;
     flex-direction: column;
+  }
+
+  .stats-card__desc {
+    margin-bottom: 2.2rem;
   }
 
   .stats-card__stats-wrapper {
